@@ -1,0 +1,189 @@
+.ant-layout-header {
+    .ant-form {
+        .ant-form-item-control-input {
+            
+            &-content {
+                .search {
+                    svg {
+                        color: #bfbfbf;
+                        font-size: 24px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.app-layout-header {
+    background: $primary-bg !important;
+    box-shadow: 0px 3px 6px #0000001f;
+    height: auto !important;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+  
+    .ant-row {
+      width: 100%;
+    }
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    span {
+      font-size: 10px;
+      font-weight: lighter;
+      color: black;
+    }
+  }
+  
+  
+  .search {
+    max-width: 660px !important;
+    border-radius: 25px !important;
+    height: 3rem;
+    align-items: center;
+  }
+  
+  .search-main {
+    text-align: center;
+    .ant-input-affix-wrapper{
+        border: 1px solid #ececec !important;
+       &:hover {
+        border-color: $primary-color !important;
+        border-right-width: 1px !important;
+        }
+    }
+  
+    .ant-input-affix-wrapper-focused {
+      border-color: $primary-color !important;
+      box-shadow: none;
+    }
+  
+    .ant-form {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      .ant-form-item {
+        margin-bottom: 0px !important;
+      }
+    }
+  }
+  
+  .header-items {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    
+    
+
+    .ant-btn:hover,
+    .ant-btn:focus {
+      background: #fff;
+      border-color: $primary-color !important;
+    }
+  
+    .ant-btn {
+      box-shadow: 0px 1px 12px #b1b1b1;
+    }
+    .anticon-loading {
+      font-size: 12px !important;
+      color: $primary-color !important;
+    }
+  }
+  
+  .header-items-public {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+  }
+  
+
+  .profile-img {
+    margin: 0 8px;
+  }
+  
+  .badge {
+    font-size: 25px !important;
+    svg {
+        color: #a8a8a8;
+    font-size: 28px;
+    vertical-align: middle;   
+    stroke-width: 1.5px;
+    }
+       // margin-right: -2rem;
+    a {
+      color: rgb(80, 80, 80) !important;
+    }
+  }
+  
+  .btn-gradient {
+    background: $primary-gradient !important;
+    color: #fff !important;
+    font-size: 14px !important;
+    min-width:200px;
+  }
+  
+  .btn-outline {
+    background: transparent !important;
+    color: #000 !important;
+    font-size: 14px !important;
+    border: 2px solid black !important;
+  }
+  
+  .header-dropdown {
+    color: #000 !important;
+    cursor: pointer;
+    margin-left: 1em;
+  }
+  
+  .profile-wrapper {
+    max-width: 300px;
+
+    @include maxWidth(1245px) {
+      max-width: 200px;
+    }
+    @include minWidth(1300px) {
+      max-width: 400px;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span.option__caret {
+      display: flex;
+      align-items: center;
+    }
+  }
+  
+  .profile-name {
+    margin-right: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+    font-size: 14px;
+  }
+  
+  .header-menu-item {
+    margin-left: 12px;
+  }
+
+  .nav-profile-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  h1.ant-typography {
+    margin-bottom: 0.5em;
+    color:$primary-text-color;
+    font-weight: 700 !important;
+    font-size: 48px;
+    line-height: 1.23;
+} 

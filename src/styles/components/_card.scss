@@ -1,0 +1,362 @@
+// Custom card
+.section-card-info {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.section-song {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+  text-transform: capitalize;
+  // white-space: nowrap;
+  &:hover {
+    color: $primary-color;
+  }
+
+  a {
+    color: $primary-text-color;
+    
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+.section-artist {
+  color: $secondary-text-color;
+  margin: 3px 0;
+  font-size: 13px;
+  a {
+    color: $secondary-text-color;
+    font-size: 13px;
+  }
+
+  a:hover {
+    color: $primary-color;
+  }
+}
+
+.section-time {
+  color: $primary-color;
+  font-size: 13px;  
+}
+
+// LIST Card
+
+.position {
+  // color: $secondary-text-color;
+  // font-weight: 600;
+  // padding-top: 6px;
+}
+
+.side-card {
+  margin-top: 10px !important;
+  box-shadow: 0px 3px 4px #0000001a !important;
+  // border-radius: 14px !important;
+  border-radius: 6px !important;
+  height: 60.6vh;
+  overflow: auto;
+}
+
+.album-divider {
+  margin: 5px;
+}
+.popular-song {
+  display: flex !important;
+  align-items: center !important;
+  padding: 12px 24px;
+
+  a {
+    color: $secondary-text-color !important;
+  }
+}
+
+.popular-song:hover {
+  background: $primary-color;
+  border-radius: 0px !important;
+  color: white;
+  svg,
+  .songs-more,
+  .favorite,
+  .album-song-time {
+    color: white;
+  }
+  .popular-time,
+  .popular-artist {
+    opacity: 1;
+    color: white;
+  }
+  .song-playing-image {
+    img {
+      // background: white;
+      filter: brightness(500%);
+    }
+  }
+}
+
+.list-card {
+  &__img {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  &__highlighted {
+    &:hover {
+      a {
+        color: white !important;
+      }
+      .music-icon {
+        filter: invert(100%);
+      }
+
+      .favorite-filled svg,
+      .favorite svg {
+        color: white !important;
+      }
+    }
+  }
+
+  &__index {
+    color: $secondary-text-color;
+    font-weight: 600;
+    padding-top: 6px;
+    font-size: 20px;
+
+    @include maxWidth(330px) {
+      font-size: 16px;
+    }
+  }
+  &__title {
+    color: $secondary-text-color;
+  }
+
+  &__info {
+    &-title {
+      &:hover {
+        cursor: pointer !important;
+        color: $primary-color !important;
+      }
+      &--nocolor {
+        &:hover {
+          cursor: pointer !important;
+          color: $secondary-text-highlight-shade !important;
+        }
+      }
+    }
+
+    &-item {
+      a {
+        color: $secondary-text-color !important;
+        &:hover {
+          color: $primary-color !important;
+        }
+      }
+
+      &--highlight {
+        a {
+          // color: $secondary-text-color !important;
+          &:hover {
+            color: $secondary-text-highlight-shade !important;
+          }
+        }
+      }
+    }
+  }
+
+  &::-webkit-scrollbar {    
+    width: 5px !important;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #c0c0c0;    
+  }
+}
+
+// multiImagedStackedCard
+
+// slider has high value for positioning --> no longer this problem
+// .slider__card {
+//   .multiStackedImgCard {
+//     &__img {
+//       &-middle {
+//         top: -50px;
+//       }
+
+//       &-bottom {
+//         top: -65px;
+//       }
+//     }
+//   }
+// }
+
+.multiStackedImgCard {
+  margin-top: 30px;
+  margin-bottom: 15px;
+
+  &__img-wrapper {
+    position: relative !important;
+    margin-bottom: 15px;
+  }
+
+  &__img {
+    border-radius: 0px !important;
+
+    &-top {
+      position: relative;
+      // top:0;
+      border-radius: 0px !important;
+      z-index: 2;
+    }
+
+    &-middle {
+      position: absolute !important;
+      top: -20px;
+      transform: scale(0.85, 0.85);
+      z-index: 1 !important;
+      border-radius: 0px !important;
+    }
+
+    &-bottom {
+      position: absolute !important;
+      top: -35px;
+      z-index: 0 !important;
+      transform: scale(0.75, 0.75);
+      border-radius: 0px !important;
+    }
+  }
+}
+
+// .side-card-main  song list card in home page
+
+.side-card-main {
+  margin: 0 1rem 2rem;
+  @include maxWidth(1200px) {
+    margin: 2rem 0px;
+  }
+
+  .side-card {
+    scrollbar-width: thin;
+    scrollbar-color: $primary-color-lighter;
+    .ant-card-body {
+      @include maxWidth(768px) {
+        padding: 16px;
+      }
+    }
+  }
+
+  .song-name {
+    font-family: "PoppinsMedium";
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .side-card .ant-skeleton {
+    margin-bottom: 20px;
+  }
+}
+
+
+.artist-circle {
+  .artist-profile-img {
+
+  }
+  .image__overlay {
+
+  }
+}
+
+.slick-list {
+  .slick-track {
+   
+  }
+}
+
+.card__wrapper.card--album {
+  .card__image-wrapper {
+    margin-bottom: 10px;
+    .card__options {     
+      svg{
+        position: absolute;
+        z-index: 999;
+        font-size: 28px;
+        color: #fff !important;
+        cursor: pointer;
+         top: 7px;
+
+        &.icon-playpause {
+         left: 50% ;
+          transform: translateX(-50%);          
+        }
+
+        &.card__options-favorite {
+          left: 10px;
+        }
+
+        &.card__options-more {
+          right: 15px;
+        }
+       }
+    }
+  }
+  .album-info{
+    a {
+      text-transform: capitalize;
+    }
+    &__title {
+      a {
+        font-size: 14px;
+        color: $primary-text-color;           
+        font-weight: 500;
+      }    
+    }
+    &__artist {
+      margin-top: -4px;
+      a {
+        font-size: 13px;
+        color: $secondary-text-color;
+      }
+    
+    }
+  }
+}
+
+
+.explore-main {
+  .ant-tabs.ant-tabs-top {
+    .ant-tabs-nav {
+      .ant-tabs-tab {
+        &-btn {
+          font-size: 16px;
+          font-weight: 500;        
+        }
+        &:not(:last-child) {
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+}
+
+.ant-tabs-content {
+  .ant-row {
+    .ant-col {
+      &:first-child {
+        .section {           
+            margin-top: 30px;           
+        }
+      }
+    }     
+  }
+}
+
+.genre-card {
+  &__title {
+    text-shadow: 1px 1px 2px rgba(0,0,0,.2);
+  }
+}
+
+
+

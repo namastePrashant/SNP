@@ -1,0 +1,75 @@
+.artist-banner.single-album-main {
+    .artist-banner__info{
+    padding-bottom: 70px;
+    }
+}
+
+.row--album-content {
+    position: relative;
+    margin-top: -30px;
+    z-index: 99;
+}
+
+.page-header--singleAlbum {
+    .album-info {
+        display: flex;
+
+        &__img {
+            height: 220px;
+            width: 220px;
+            margin-right: 30px;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__meta {
+            .single-album-category-title {
+                font-size: 13px;
+                letter-spacing: 3px;
+                color: #d0beff;
+               
+            }
+
+            .single-album-title {
+                margin-bottom: 5px !important;
+            }
+
+            .single-album-artist-info {
+                .single-album-artist-names {}
+
+
+            }
+
+            .favorite-info {
+                font-size: 14px;
+                color: #8c61fe;
+                margin: 3px 0 5px;
+            }
+
+
+            .single-album-record-label {
+                font-size: 13px;
+                color: $secondary-text-color;
+            }
+
+            .links {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.divider--dot {
+    margin: 0 7px;
+}
+
+
+
+
+.single-album-songs.songList__wrapper {
+    margin-top: 0 !important;
+}

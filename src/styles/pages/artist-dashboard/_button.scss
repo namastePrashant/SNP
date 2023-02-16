@@ -1,0 +1,9 @@
+.delete-button{
+  transition:all 0.3s ease-in-out !important;
+  &:hover{
+    border:1px solid red !important;
+    svg{
+      color:red !important;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.user-banner {
+    padding: 40px 0 10px;
+
+    .user-info-wrapper {
+        display: flex;
+
+        .header-user {
+            height: 100px;
+            width: 100px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .user-meta {
+            .user-title {
+                font-size: 26px;
+                text-transform: capitalize;
+            }
+
+            .user-info-text {
+                span {
+                    display: block;
+                    font-size: 14px;
+                }
+
+                .email {
+                    color: $secondary-text-color;
+                    margin: 4px 0 2px;
+                    
+                }
+
+            }
+
+        }
+    }
+
+    .links {
+        margin-left: auto;
+    }
+}
+
+.favorite-info.user-fav {
+    font-size: 18px;
+    .time {
+        color: $primary-color;
+    }
+    
+}

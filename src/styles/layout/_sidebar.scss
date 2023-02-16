@@ -1,0 +1,29 @@
+.sidebar {
+    padding-left: 1rem;
+
+    @include maxWidth(1200px){
+        padding-left: 0px;
+    }
+}
+
+
+.side-layout {
+    .ant-menu {
+        .library-items {
+            &.library-items--playlist {
+                a {
+                    .sidebar__icons__small {
+                        height: 30px;
+                        width: 30px;
+
+                    }
+                    .sidebar__label__title {
+                        font-weight: 400;
+                        color: #101010;
+                        font-size: 13px !important;
+                    }
+                }
+            }
+        }
+    }
+}

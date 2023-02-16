@@ -1,0 +1,108 @@
+.react-jinke-music-player-main {
+    .panel-content {
+        overflow: unset !important;
+        box-shadow: 0 -4px 46px rgba(0, 0, 0, .1);
+
+        &:hover {
+            .anticon-close-circle {
+                visibility: visible;
+            }
+        }
+
+        .img-content {
+            background-size: cover !important;
+        }
+
+        .progress-bar-content {
+            display: flex;
+            flex-direction: column;
+
+            .audio-main {
+                margin-top: 5px;
+            }
+        }
+
+        .player-content {
+            overflow: unset !important;
+
+            .group {
+                span {
+                    svg {
+                        color: #878787 !important;
+                    }
+                }
+
+                .prev-audio,
+                .next-audio {
+                    svg {
+                        fill: transparent;
+                        stroke: $primary-color;
+                        stroke-width: 1px;
+                        font-size: 32px;
+                    }
+
+                }
+
+                .play-btn {
+                    svg {
+                        font-size: 42px !important;
+                        color: $primary-color !important;
+                    }
+                }              
+
+
+
+            }
+            .audio-lists-btn {
+                background-color: transparent !important ;
+                position: relative;
+                &:after {
+                    position: absolute;
+                    content: 'QUEUE';
+                    font-size: 11px;
+                    color: #4233f9;
+                    bottom: -13px;
+                }
+
+                svg {
+                    font-size: 18px !important;
+                }
+            }
+
+            .anticon-close-circle {
+                position: absolute;
+                z-index: 9999;
+                right: 12px;
+                top: -12px;
+                background:#fff;
+                border-radius: 50%;
+                padding: 3px;
+                box-shadow: 0px 4px 34px  rgba(0, 0, 0, .4);
+                transition: all 450ms ease;
+                svg {
+                    color: #fe6161 !important;
+                }
+            }
+        }
+    }
+}
+
+.react-jinke-music-player-main.light-theme svg {
+    color: #878787 !important;
+}
+
+.react-jinke-music-player-main .music-player-panel .panel-content .progress-bar-content .audio-main .current-time,
+.react-jinke-music-player-main .music-player-panel .panel-content .progress-bar-content .audio-main .duration {
+    flex-basis: auto !important;
+}
+
+.react-jinke-music-player-main .music-player-panel .panel-content .player-content>.group {
+    flex: 0 1 auto;
+    margin: 0;
+}
+
+.react-jinke-music-player-main .music-player-panel .panel-content .player-content {
+    padding-left: 3%;
+    flex-basis: 35%;
+    justify-content: space-between;
+}

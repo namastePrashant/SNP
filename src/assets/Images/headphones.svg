@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="43.521" height="38.251" viewBox="0 0 43.521 38.251">
+  <g id="headphones" transform="translate(0 -31)">
+    <g id="Group_579" data-name="Group 579" transform="translate(0 31)">
+      <g id="Group_578" data-name="Group 578" transform="translate(0 0)">
+        <path id="Path_94" data-name="Path 94" d="M21.761,31A21.773,21.773,0,0,0,0,52.676v10.2A3.829,3.829,0,0,0,3.825,66.7H5.1V53.951H3.825a3.781,3.781,0,0,0-1.275.235v-1.51a19.211,19.211,0,0,1,38.421,0v1.51a3.781,3.781,0,0,0-1.275-.235H38.421V66.7H39.7a3.829,3.829,0,0,0,3.825-3.825v-10.2A21.773,21.773,0,0,0,21.761,31Z" transform="translate(0 -31)" fill="#8c61fe"/>
+      </g>
+    </g>
+    <g id="Group_581" data-name="Group 581" transform="translate(7.65 51.401)">
+      <g id="Group_580" data-name="Group 580">
+        <path id="Path_95" data-name="Path 95" d="M93.825,271H92.55A2.55,2.55,0,0,0,90,273.55V286.3a2.55,2.55,0,0,0,2.55,2.55h1.275a1.275,1.275,0,0,0,1.275-1.275v-15.3A1.275,1.275,0,0,0,93.825,271Z" transform="translate(-90 -271)" fill="#8c61fe"/>
+      </g>
+    </g>
+    <g id="Group_583" data-name="Group 583" transform="translate(30.771 51.401)">
+      <g id="Group_582" data-name="Group 582">
+        <path id="Path_96" data-name="Path 96" d="M364.55,271h-1.275A1.275,1.275,0,0,0,362,272.275v15.3a1.275,1.275,0,0,0,1.275,1.275h1.275a2.55,2.55,0,0,0,2.55-2.55V273.55A2.55,2.55,0,0,0,364.55,271Z" transform="translate(-362 -271)" fill="#8c61fe"/>
+      </g>
+    </g>
+  </g>
+</svg>

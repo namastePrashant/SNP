@@ -1,0 +1,174 @@
+.home-layout {
+  padding: 40px 20px 40px 40px;
+
+  .popular-song:hover {
+    .favorite svg {
+      color: #fff !important;
+    }
+
+    .favorite-filled svg {
+      color: #fff !important;
+    }
+  }
+
+
+  @include maxWidth(576px) {
+    padding: 24px 12px !important;
+  }
+}
+
+
+.side-card-main {
+
+  .side-card.list-card {
+    .ant-card-body {
+      padding: 2px 0;
+    }
+
+    .top-song {
+      display: flex !important;
+      align-items: center !important;
+      flex-wrap: nowrap !important;
+      margin: 0;
+      padding: 15px 20px;
+
+      &:nth-child(even) {
+        background: #f9f9f9;
+      }
+
+      .song-position {
+        color: #cdcdcd !important;
+        font-size: 26px;
+        font-weight: 600 !important;
+        margin-bottom: 0 !important;
+        min-width: 38px;
+        padding: 0 !important;
+      }
+
+      .top-song__info {
+        display: flex;
+        flex-grow: 1;
+        padding-left: 15px;
+
+
+        .song-name-wrapper {
+          padding-left: 15px;
+          flex-grow: 1;
+
+          .song-name {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+
+            span {
+              font-weight: 600;
+            }
+          }
+
+          .song-artist {
+            color: $secondary-text-color;
+            font-size: 13px;
+            font-weight: 400;
+          }
+        }
+
+        .songs-more {
+          font-size: 24px;
+          font-weight: 600;
+          color: $primary-color;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .ant-card.popular {
+    .popular-song {
+      transition: all 450ms ease;
+
+      &:nth-child(even) {
+        background: #f9f9f9;
+        &:hover {
+          background: $primary-color;
+        }
+      }
+      .song-info {
+        .song-name {
+        .list-card__info-title--nocolor{
+          &:hover {
+            color: #fff !important;
+          }
+        }
+          
+        }
+        .song-artist {
+          font-size: 12px;
+          margin-top: 0;
+          height: 20px;
+          .list-card__info-item--highlight {
+            display: flex;
+          flex-wrap: wrap;
+          overflow: hidden;
+          height: 20px;
+          }
+        }
+      }
+
+      .songs-more {
+        .popular-time {
+          font-size: 12px;
+          color: #878787;
+          font-weight: 400;
+        }
+
+        .favorite {
+          color: $primary-color;
+          font-size: 22px;
+        }
+      }
+
+      &:hover {      
+        .song-name,.song-artist,.favorite,.popular-time{
+         color: #fff; 
+         transition: all 350ms ease;
+        }
+      }
+    }
+
+
+  }
+
+  .ant-card {
+    .ant-card-body {
+      height: 100%;
+
+      .ant-result {
+        height: 100%;
+        padding: 0 !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &-title {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+.explore-main { 
+  margin-bottom: 2rem;
+  .ant-result-icon{
+      margin-bottom: 0;
+       svg {
+         font-size: 44px;
+       } 
+  }
+  .ant-result-title {
+    font-size: 18px;
+  }
+}
+

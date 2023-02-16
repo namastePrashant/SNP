@@ -1,0 +1,147 @@
+// end titles
+$colors: (
+  "black": $primary-text-color,
+  "grey": $secondary-text-color,
+  "lightGrey": $secondary-text-color-lighter,
+  "green": $text-green,
+  "primary": $primary-color,
+  "dg":$text-dark-grey,
+);
+
+$font-weights: (
+  "regular": $font-family,
+  "medium": $font-family-medium,
+);
+
+$marginb: (
+  "mb0": 0rem,
+);
+
+$font-sizes: (
+  "10": 0.7143rem,
+  "11": 0.7857rem,
+  "12": 0.8571rem,
+  "13": 0.9286rem,
+  "14": 1rem,
+  "15": 1.071rem,
+  "16": 1.143rem,
+  "18": 1.286rem,
+  "20": 1.429rem,
+  "22": 1.571rem,
+  "24": 1.714rem,
+  "26": 1.857rem,
+  "28": 2rem,
+  "30": 2.143rem,
+  "32": 2.286rem,
+  "34": 2.429rem,
+  "36": 2.571rem,
+  "38": 2.714rem,
+  "40": 2.857rem,
+);
+
+@each $i, $size in $font-sizes {
+  // for font -sizes
+  .text-#{$i} {
+    font-size: $size !important;
+    color: $primary-text-color;
+    margin-top: 0;
+    margin-bottom: 0.2 * $size !important;
+  }
+
+  // for colors
+  @each $name, $color in $colors {
+    .text-#{$i}-#{$name} {
+      font-size: $size !important;
+      color: $color !important;
+      margin-top: 0;
+      margin-bottom: 0.2 * $size !important;
+    }
+    // for font weight
+    @each $fname, $weight in $font-weights {
+      .text-#{$i}-#{$name}-#{$fname} {
+        font-size: $size !important;
+        color: $color;
+        margin-top: 0;
+        margin-bottom: 0.2 * $size !important;
+        font-family: $weight !important;
+      }
+      // for margin bottom
+      @each $marginbottom, $mb in $marginb {
+        .text-#{$i}-#{$name}-#{$fname}-#{$marginbottom} {
+          font-size: $size !important;
+          color: $color;
+          margin-top: 0;
+          margin-bottom: $mb !important;
+          font-family: $weight !important;
+        }
+      }
+    }
+  }
+}
+// titles
+
+// breaking sections
+@for $i from 1 to 5 {
+  // padding top bottom together
+  .section-break-#{$i} {
+    padding: 1em * $i 0;
+    @include maxWidth(992px) {
+      padding: 1em 0;
+    }
+  }
+
+  // padding top bottom together
+  .section-padding-#{$i} {
+    padding: 1em * $i;
+    @include maxWidth(992px) {
+      padding: 0.3em * $i;
+    }
+  }
+
+  // padding top bottom seperately
+  @for $j from 1 to 5 {
+    .section-break-#{$i}-#{$j} {
+      padding-top: 1em * $i;
+      padding-bottom: 1em * $j;
+      @include maxWidth(992px) {
+        padding: 1em 0;
+      }
+    }
+  }
+}
+
+// end breaking sections
+
+// animations
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.rotate-180 {
+  transform: rotate(180deg) !important;
+}
+
+// animation for chart leave
+.song-single-graph-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.song-single-graph-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.song-single-graph-exit {
+  opacity: 1;
+}
+.song-single-graph-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}

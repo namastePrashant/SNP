@@ -1,0 +1,118 @@
+.list-item {
+    display: flex;
+    align-items: center;
+    &__index {
+      padding: 0 15px;
+      margin-bottom: 0 !important;
+    }
+  
+    &__info{ 
+      flex-grow: 1;
+  
+      .song-name {
+        text-transform: capitalize;
+        
+      }
+  
+      .list-card__info-item a {
+        font-size: 13px;
+      }
+    }     
+  
+    &__more {
+      padding: 0 15px;
+      display: flex;
+      svg {
+        font-size: 18px;
+        color:$secondary-text-color;
+      }
+      .list-card__song_time {
+        font-size: 12px;
+      }
+  
+    &.list-item--dot {
+      display: flex;
+    }
+    }
+  }
+
+
+
+.songList__wrapper {
+    .song-list.list-item {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        align-items: center;
+
+        .song-index {
+            color: #CDCDCD;
+            font-weight: 600;
+            font-size: 24px;
+            width: 50px;
+            padding: 0;
+            margin-right: 10px;
+        }
+
+        .song-info {
+            .song-name {
+                font-size: 14px;
+                font-weight: 500;
+            }
+
+            .play-count {
+                font-size: 12px;
+                color: $secondary-text-color;
+                margin-top: 5px;
+            }
+
+        }
+
+        .songs-more {
+            flex-direction: column;
+            align-items: center;
+
+            .song__list__time {
+
+                color: $primary-text-color;
+                font-size: 12px;
+                font-weight: 500;
+                margin-bottom: 2px;
+            }
+
+            svg {
+                font-size: 22px;
+                color: $primary-color;
+            }
+        }
+
+        &:hover {
+            background: rgba(140, 97, 254, 0.1);
+
+        }
+    }
+
+    .song-list--nobg.list-item {
+        margin-bottom: 0 !important;
+        padding-top: 15px ;
+        padding-bottom: 15px ;
+        line-height: 1.45;
+        border-bottom: 1px solid #e5e5e5;
+        .song-info {
+            .play-count {
+                margin-top: 1px
+            }
+        }
+        .songs-more.list-item__more {
+            flex-direction: row !important;
+            align-items: center;
+            font-size: 13px;
+            color: $primary-color-shade;
+        }
+    
+        svg {
+            color: #909090 !important;
+        }
+    }
+}
